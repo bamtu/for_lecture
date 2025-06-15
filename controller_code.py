@@ -14,8 +14,6 @@ def on_up_released():
     radio.send_number(0)
 controller.up.on_event(ControllerButtonEvent.RELEASED, on_up_released)
 
-
-
 def on_forever():
     if controller.up.is_pressed():
         radio.send_string("A1")

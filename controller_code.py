@@ -28,6 +28,6 @@ def on_forever():
     if controller.B.is_pressed():
         radio.send_string("A6")
 
-number = 30
+number = YOUR_NUMBER
 radio.set_group(number)
 forever(on_forever)

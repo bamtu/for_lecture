@@ -14,8 +14,7 @@ def on_up_released():
     radio.send_number(0)
 controller.up.on_event(ControllerButtonEvent.RELEASED, on_up_released)
 
-number = 30
-radio.set_group(number)
+
 
 def on_forever():
     if controller.up.is_pressed():
@@ -30,5 +29,7 @@ def on_forever():
         radio.send_string("A5")
     if controller.B.is_pressed():
         radio.send_string("A6")
-        
+
+number = 30
+radio.set_group(number)
 forever(on_forever)
